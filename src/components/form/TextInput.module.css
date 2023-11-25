@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 0 20px;
+    
 }
 
 .textInput {
@@ -19,6 +19,10 @@
 }
 
 @media (min-width: 600px) {
+    .container {
+        padding: 10px 20px 10px 0;
+    }
+
     .textInput {
         width: 100%
     }
