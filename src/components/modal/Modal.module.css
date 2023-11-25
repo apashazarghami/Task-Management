@@ -1,0 +1,26 @@
+.container {
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #e3e3e3;
+    background: #455d7a;
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 268px;
+    left: 32%;
+}
+
+.editButton {
+    background: #f95959;
+    color: #233142;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin-top: 10px;
+    transition: all 0.3s linear;
+}
+
+.editButton:hover {
+    background: #ee3636;
+}

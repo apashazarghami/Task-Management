@@ -17,7 +17,7 @@ const Form = () => {
     const addHandler = async (event) => {
         event.preventDefault();
         authenticationForm({ title, description, titleRef, descriptionRef });
-        if(title && description) {
+        if(title.trim() && description.trim()) {
             setIsLoading(true)
             const task = { id: Date.now(), title, description, completed: false };
             try {
@@ -38,8 +38,8 @@ const Form = () => {
         <form onSubmit={addHandler}>
             <h3 className={styles.title}>Add Task</h3>
             <div className={styles.TextInputContainer}>
-                <TextInput label='Title' value={title} setValue={setTitle} ref={titleRef} />
-                <TextInput label='Description' value={description} setValue={setDescription} ref={descriptionRef} />
+                <TextInput label='Title' value={title} setValue={setTitle} ref={titleRef} id='title' classInput='textInput' />
+                <TextInput label='Description' value={description} setValue={setDescription} ref={descriptionRef} id='description' classInput='textInput' />
             </div>
             <button disabled={isLoading} className={`${styles.addButton} ${isLoading && styles.sendingButton}`} type='submit'>{isLoading ? 'Sending' : 'Add task'}</button>
         </form>

@@ -30,23 +30,13 @@
     color: #36485e;
 }
 
-.checkboxInput {
-    /* width: 20px;
-    height: 20px; */
-    border: 2px solid #455d7a;
-    font-size: 2rem;
-    color: #455d7a;
-    margin: 0 5px;
-}
-
 .completed {
     opacity: 0.5;
     text-decoration: line-through;
 }
 
-
-.iconContainer {
-    
+.noneDisplay {
+    opacity: 0.5;
 }
 
 .icon {

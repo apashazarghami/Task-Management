@@ -5,16 +5,23 @@
     
 }
 
+.editTextInput {
+    color: #e3e3e3;
+}
+
 .textInput {
+    color: #455d7a;
+}
+
+.textInput, .editTextInput {
     all: unset;
     border: 1px solid #233142;
     border-radius: 5px;
-    color: #455d7a;
     padding: 5px 10px;
     margin-top: 5px;
 }
 
-.textInput:focus {
+.textInput:focus, .editTextInput:focus {
     border: 1px solid #f95959;
 }
 

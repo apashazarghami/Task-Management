@@ -1,4 +1,4 @@
-import { ADD_TASK, FAILURE_REQUEST, PENDING_REQUEST, REMOVE_TASK, SUCCESS_REQUEST } from "./taskTypes"
+import { ADD_TASK, COMPLETE_TASK, EDIT_TASK, FAILURE_REQUEST, PENDING_REQUEST, REMOVE_TASK, SORT_TASK, SUCCESS_REQUEST } from "./taskTypes"
 
 const pendingRequest = () => {
     return {
@@ -34,4 +34,25 @@ const removeTask = payload => {
     }
 }
 
-export { pendingRequest, successRequest, failureRequest, addTask, removeTask }
+const completeTask = payload => {
+    return {
+        type: COMPLETE_TASK,
+        payload
+    }
+}
+
+const editTask = payload => {
+    return {
+        type: EDIT_TASK,
+        payload
+    }
+}
+
+const sortTask = payload => {
+    return {
+        type: SORT_TASK,
+        payload
+    }
+}
+
+export { pendingRequest, successRequest, failureRequest, addTask, removeTask, completeTask, editTask, sortTask }
