@@ -1,4 +1,4 @@
-import { ADD_TASK, FAILURE_REQUEST, PENDING_REQUEST, SUCCESS_REQUEST } from "./taskTypes";
+import { ADD_TASK, FAILURE_REQUEST, PENDING_REQUEST, REMOVE_TASK, SUCCESS_REQUEST } from "./taskTypes";
 
 const INITIAL_STATE = {
     isLoading: false,
@@ -29,6 +29,12 @@ const taskReducer = (state = INITIAL_STATE, { type, payload }) => {
             return {
                 ...state,
                 tasks: [...state.tasks, payload]
+            }
+        case REMOVE_TASK:
+            const filteredTasks = state.tasks.filter(task => task.id !== payload)
+            return {
+                ...state,
+                tasks: filteredTasks
             }
         default: return state
     }

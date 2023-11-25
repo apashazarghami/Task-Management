@@ -1,11 +1,18 @@
 import styles from './Tasks.module.css';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom'
+import { app } from '../../utilities/axios';
+import { removeTask } from '../../redux/task/taskActions';
 
 const Tasks = () => {
     const { tasks } = useSelector(state => state.task);
+    const dispatch = useDispatch();
+    const removeHandler = async (id) => {
+        await app.delete(`api/tasks/${id}`)
+        dispatch(removeTask(id))
+    }
     return(
         <div className={styles.container}>
             {
@@ -20,7 +27,7 @@ const Tasks = () => {
                             </div>
                             <div className={styles.iconContainer}>
                                 <MdOutlineModeEdit className={styles.icon} />
-                                <IoTrashOutline className={styles.icon} />
+                                <IoTrashOutline onClick={() => removeHandler(task.id)} className={styles.icon} />
                                 <input type='checkbox' className={styles.checkboxInput} checked={task.completed} />
                             </div>
                         </div>
