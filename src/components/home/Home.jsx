@@ -7,13 +7,11 @@ import Loader from "../Loader/Loader";
 import Error from "../error/Error";
 import Form from '../form/form';
 import Tasks from '../tasks/Tasks';
+import { app } from '../../utilities/axios';
 
 const Home = () => {
     const dispatch = useDispatch();
-    const { isLoading, tasks, error } = useSelector(state => state.task)
-    const app = axios.create({
-        baseURL: 'http://46.100.46.149:8069/'
-    })
+    const { isLoading, error } = useSelector(state => state.task);
 
     useEffect(() => {
         const fetchRequest = async () => {
@@ -22,7 +20,6 @@ const Home = () => {
                 const { data } = await app.get('api/tasks');
                 dispatch(successRequest(data))
             } catch(err) {
-                console.log(err)
                 dispatch(failureRequest(err.message))
             }
         }
@@ -40,5 +37,7 @@ const Home = () => {
         </div>
     )
 }
+
+export { app }
 
 export default Home

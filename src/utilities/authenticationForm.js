@@ -1,6 +1,6 @@
 import toast from 'react-hot-toast';
 
-const notify = (text, status) => status === 'success' ? toast.success(text) : toast.error(text);
+export const notify = (text, status) => status === 'success' ? toast.success(text) : toast.error(text);
 
 const authenticationForm = ({ title, description, titleRef, descriptionRef }) => {
     if (!title && !description) {
