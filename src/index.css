@@ -3,8 +3,17 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
 }
 
-button {
+:root {
+  background: #e3e3e3;
+}
+
+button, a, input {
   all: unset;
+}
+
+button, a {
+  cursor: pointer;
 }

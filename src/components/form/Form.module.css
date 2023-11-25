@@ -1,0 +1,23 @@
+.title {
+    color: #455d7a;
+}
+
+.TextInputContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+.addButton {
+    background: #f95959;
+    color: #233142;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin-top: 10px;
+    transition: all 0.3s linear;
+}
+
+.addButton:hover {
+    background: #ee3636;
+}

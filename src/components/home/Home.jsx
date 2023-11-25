@@ -1,8 +1,11 @@
+import styles from './Home.module.css';
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { failureRequest, pendingRequest, successRequest } from "../../redux/task/taskActions";
 import axios from 'axios';
 import Loader from "../Loader/Loader";
+import Error from "../error/Error";
+import Form from '../form/form';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -18,6 +21,7 @@ const Home = () => {
                 const { data } = await app.get('api/tasks');
                 dispatch(successRequest(data))
             } catch(err) {
+                console.log(err)
                 dispatch(failureRequest(err.message))
             }
         }
@@ -25,8 +29,12 @@ const Home = () => {
     }, [])
 
     return(
-        <div>
-            { isLoading && <Loader />}
+        <div className={styles.container}>
+            { isLoading ? <Loader /> : error ? <Error /> :
+                <>
+                    <Form />
+                </> 
+            }
         </div>
     )
 }

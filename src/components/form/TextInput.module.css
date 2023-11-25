@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.textInput {
+    border: 1px solid #233142;
+    border-radius: 5px;
+    color: #455d7a;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+.textInput:focus {
+    border: 1px solid #f95959;
+}
+
+@media (min-width: 600px) {
+    .textInput {
+        width: 100%
+    }
+}

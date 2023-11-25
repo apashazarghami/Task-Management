@@ -1,0 +1,10 @@
+.container {
+    padding: 20px;
+    color: #233142;
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding: 20px 40px;
+    }
+}
