@@ -6,6 +6,7 @@ import axios from 'axios';
 import Loader from "../Loader/Loader";
 import Error from "../error/Error";
 import Form from '../form/form';
+import Tasks from '../tasks/Tasks';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const Home = () => {
             { isLoading ? <Loader /> : error ? <Error /> :
                 <>
                     <Form />
+                    <Tasks />
                 </> 
             }
         </div>

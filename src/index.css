@@ -10,10 +10,7 @@
   background: #e3e3e3;
 }
 
-button, a, input {
-  all: unset;
-}
-
 button, a {
+  all: unset;
   cursor: pointer;
 }
