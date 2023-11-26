@@ -1,13 +1,13 @@
-import styles from './Error.module.css';
-import { useSelector } from "react-redux"
+import styles from "./Error.module.css";
+import { useSelectorHelper } from "../../hooks/useSelectorHelper";
 
 const Error = () => {
-    const { error } = useSelector(state => state.task)
-    return(
-        <div className={styles.container}>
-            <h3>{error}</h3>
-        </div>
-    )
-}
+  const { error } = useSelectorHelper();
+  return (
+    <div className={styles.container}>
+      <h3>{error}</h3>
+    </div>
+  );
+};
 
-export default Error
+export default Error;

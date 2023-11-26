@@ -1,31 +1,32 @@
 .container {
-    background: #455d7a;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    color: #e3e3e3;
+  background: #455d7a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: #e3e3e3;
 }
 
 .backArrow {
-    color: #e3e3e3;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s linear;
+  color: #e3e3e3;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
 }
 
 .homeLink {
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: all 0.3s linear;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s linear;
 }
 
-.backArrow:hover, .homeLink:hover {
-    color: #ffffff;
+.backArrow:hover,
+.homeLink:hover {
+  color: #ffffff;
 }
 
 @media (min-width: 600px) {
-    .container {
-        padding: 10px 40px;
-    }
+  .container {
+    padding: 10px 40px;
+  }
 }

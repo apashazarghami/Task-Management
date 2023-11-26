@@ -1,7 +1,7 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f95959;
-    font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f95959;
+  font-weight: 700;
 }

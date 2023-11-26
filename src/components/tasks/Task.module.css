@@ -1,18 +1,18 @@
 .container {
-    padding: 20px;
+  padding: 20px;
 }
 
 .title {
-    color: #455d7a;
+  color: #455d7a;
 }
 
 .description {
-    color: #233142;
-    font-weight: 500;
+  color: #233142;
+  font-weight: 500;
 }
 
 @media (min-width: 600px) {
-    .container {
-        padding: 20px 40px;
-    }
+  .container {
+    padding: 20px 40px;
+  }
 }

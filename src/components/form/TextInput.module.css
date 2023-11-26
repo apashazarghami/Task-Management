@@ -1,36 +1,37 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .editTextInput {
-    color: #e3e3e3;
+  color: #e3e3e3;
 }
 
 .textInput {
-    color: #455d7a;
+  color: #455d7a;
 }
 
-.textInput, .editTextInput {
-    all: unset;
-    border: 1px solid #233142;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-top: 5px;
+.textInput,
+.editTextInput {
+  all: unset;
+  border: 1px solid #233142;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 5px;
 }
 
-.textInput:focus, .editTextInput:focus {
-    border: 1px solid #f95959;
+.textInput:focus,
+.editTextInput:focus {
+  border: 1px solid #f95959;
 }
 
 @media (min-width: 600px) {
-    .container {
-        padding: 10px 20px 10px 0;
-    }
+  .container {
+    padding: 10px 20px 10px 0;
+  }
 
-    .textInput {
-        width: 100%
-    }
+  .textInput {
+    width: 100%;
+  }
 }
