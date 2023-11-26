@@ -18,8 +18,12 @@ const Home = () => {
   const { isLoading, error } = useSelectorHelper();
 
   useEffect(() => {
+    dispatch(pendingRequest());
+    fetch('http://46.100.46.149:8069/api/tasks')
+      .then(res => res.json())
+      .then(data => dispatch(successRequest(data)))
+      .catch(err => dispatch(failureRequest(err.message)))
     const fetchRequest = async () => {
-      dispatch(pendingRequest());
       try {
         const { data } = await app.get("api/tasks");
         dispatch(successRequest(data));
@@ -27,7 +31,7 @@ const Home = () => {
         dispatch(failureRequest(err.message));
       }
     };
-    fetchRequest();
+    // fetchRequest();
   }, []);
 
   return (
