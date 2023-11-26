@@ -1,8 +1,7 @@
-# React + Vite
+This application operates by sending a request to the server when initially rendered. The received data is then displayed to the user. At the top of the page, there are two options: "Home" and a "Back" button. By clicking on the "Home" option, the user returns to the first page of the application. Clicking the "Back" button takes the user one step back.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Users can search for tasks based on titles and descriptions. Additionally, they can sort tasks by completion status. It's important to note that, since the received data does not include the creation time of each task, sorting based on the earliest or latest time is not possible.
 
-Currently, two official plugins are available:
+Clicking on the title of each task takes the user to a page displaying details about that specific task. Here, users can view the title and description. Users have the ability to create new tasks, edit existing ones, delete tasks, and mark them as completed or incomplete. All these actions are stored on the server.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+When a user attempts to create a new task and the title or description fields are empty, a toast message is displayed, prompting the user to fill in the required information. The application is also responsive. On the main site page, if a task has a large number of descriptions or a lengthy title, the corresponding cell does not expand but instead shows the content followed by three dots (...).
