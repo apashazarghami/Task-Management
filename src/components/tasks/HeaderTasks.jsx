@@ -30,11 +30,12 @@ const HeaderTasks = ({ search, setSearch }) => {
         classInput="textInput"
       />
       <div className={styles.selectContainer}>
-        <label className={styles.labelSort}>Sort by</label>
+        <label htmlFor="sort" className={styles.labelSort}>Sort by</label>
         <select
           className={styles.selectItems}
           value={selected}
           onChange={sortedHandler}
+          id="sort"
         >
           <option value="UNCOMPLETED">Uncompleted</option>
           <option value="COMPLETED">Completed</option>
